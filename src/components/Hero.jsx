@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
       <div className="absolute p-4 top-[40px]">
-        <img src="\src\assets\logo.jpg" width={100} height={100} className="hidden md:block"/>
+        <img src="\src\assets\logo.jpg" alt="logo" width={100} height={100} className="hidden md:block"/>
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-full">
