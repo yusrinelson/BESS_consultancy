@@ -15,7 +15,7 @@ export default function About() {
         <h1 className="bg-[#FF8A00] rounded-md mb-4 w-fit text-white text-2xl p-4">
           Who are we?
         </h1>
-        <p className="p-4 text-center md:text-left">
+        <p className="p-4 text-left">
           BESS Consultancy is passionate about quality education, digital
           transformation, and educational pedagogies. We have over 23 years of
           experience in Education and Training, delivering quality educational
