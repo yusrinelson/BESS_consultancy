@@ -1,5 +1,6 @@
 // import React from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import logo from '../assets/logo.jpg'
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Logo Section */}
         <div className="mb-4 md:mb-0 z-10">
-          <img src="\src\assets\logo.jpg" alt='logo' width={100} height={100} />
+          <img src={logo} alt='logo' width={100} height={100} />
         </div>
 
         {/* Navigation Links */}

@@ -1,11 +1,12 @@
 // import React from 'react';
+import groupImage from '../assets/about_group2.png';
 
 export default function About() {
   return (
     <div className="flex flex-col md:flex-row h-fit mb-6" id="about">
       <picture className="w-full md:w-1/2 flex items-center justify-center">
         <img
-          src="/src/assets/about_group2.png"
+          src={groupImage}
           alt="about image"
           className="rounded-md mt-6 max-w-full h-auto"
         />
