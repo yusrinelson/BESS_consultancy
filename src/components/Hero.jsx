@@ -4,7 +4,7 @@ import logo from '../assets/logo.jpg'
 export default function Hero() {
   return (
     <div
-      className="relative h-[95vh] bg-[url('assets/bess_cover.jpg')] bg-cover bg-center bg-no-repeat bg-fixed mb-6"
+      className="relative h-[98vh] bg-[url('assets/bess_cover.jpg')] bg-cover bg-center bg-no-repeat bg-fixed mb-6"
       id="hero"
     >
       <div className="absolute inset-0 bg-black opacity-70"></div>

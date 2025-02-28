@@ -56,7 +56,7 @@ export default function Skills() {
               viewport={{ once: true, amount: 0.2 }}
               variants={cardVariants}
             >
-              <div className="bg-white w-full h-[10rem] rounded-md flex items-center justify-center text-black font-semibold shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
+              <div className="bg-white border-2 border-[#C80201] w-full h-[10rem] rounded-md flex items-center justify-center text-black font-semibold shadow-md hover:shadow-xl transition-shadow duration-300 ease-in-out">
                 <p>{skill}</p>
               </div>
             </motion.div>

@@ -17,7 +17,7 @@ export default function Navbar() {
           setIsScrolled(true);
         } else {
           setIsScrolled(false);
-          setIsVisible(true); // Always show navbar when above hero section
+          setIsVisible(true); // this allows to always show navbar when above hero section
         }
       }
     };
@@ -30,7 +30,7 @@ export default function Navbar() {
         }
         inactivityTimeout.current = setTimeout(() => {
           setIsVisible(false);
-        }, 2000); // Hide navbar after 2 seconds of inactivity
+        }, 1500); // Hides the navbar after 1.5 seconds of inactivity
       }
     };
 
@@ -57,6 +57,7 @@ export default function Navbar() {
           {menuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
         </div>
       </div>
+      
       <ul className={`flex flex-col md:flex-row gap-x-3 mt-4 md:mt-0 w-full justify-end ${menuOpen ? 'block' : 'hidden'} md:flex`}>
         <li className="cursor-pointer text-[1.2rem] transition-colors duration-300 px-3 py-2 rounded-md hover:text-gray-200 hover:bg-gray-600">
           <a href="#about">About</a>
