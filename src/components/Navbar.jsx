@@ -51,7 +51,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className={`w-full text-white fixed right-0 z-20 p-4 transition-all duration-300 ${isScrolled ? 'bg-[#428bca]' : 'md:bg-transparent bg-[#141515]'} rounded-b ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`w-full text-white fixed right-0 z-20 p-2 transition-all duration-300 ${isScrolled ? 'bg-[#428bca]' : 'md:bg-transparent bg-[#141515]'} rounded-b ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <div className="flex justify-end items-center">
         <div className="md:hidden" onClick={toggleMenu}>
           {menuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
