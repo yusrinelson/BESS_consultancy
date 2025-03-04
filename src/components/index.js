@@ -1,4 +1,31 @@
 
+export const NAV = [
+  {
+    id: 1,
+    title: "About",
+    link: "#about",
+  },
+  {
+    id: 2,
+    title: "Services",
+    link: "#services",
+  },
+  {
+    id: 3,
+    title: "Skills",
+    link: "#skills",
+  },
+  {
+    id: 4,
+    title: "Clients",
+    link: "#clients",
+  },
+  {
+    id: 5,  
+    title: "Contact",
+    link: "#contact",
+  }
+]
 
 export const SERVICES = {
     contentDevelopment: "Content Development",

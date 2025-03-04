@@ -1,6 +1,7 @@
 // import React from 'react';
-import { useState, useEffect, useRef } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { useState, useEffect, useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { NAV } from "./index.js";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,7 +11,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById('hero');
+      const heroSection = document.getElementById("hero");
       if (heroSection) {
         const heroSectionHeight = heroSection.offsetHeight;
         if (window.scrollY > heroSectionHeight) {
@@ -30,16 +31,16 @@ export default function Navbar() {
         }
         inactivityTimeout.current = setTimeout(() => {
           setIsVisible(false);
-        }, 1500); // Hides the navbar after 1.5 seconds of inactivity
+        }, 1500);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
       if (inactivityTimeout.current) {
         clearTimeout(inactivityTimeout.current);
       }
@@ -51,29 +52,33 @@ export default function Navbar() {
   };
 
   return (
-    <div className={`w-full text-white fixed right-0 z-20 p-2 transition-all duration-300 ${isScrolled ? 'bg-[#428bca]' : 'md:bg-transparent bg-[#141515]'} rounded-b ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+    <div
+      className={`w-full text-white fixed right-0 z-20 p-2 py-4 transition-all duration-300 ${
+        isScrolled ? "bg-[#428bca]" : "md:bg-transparent bg-[#141515]"
+      } rounded-b ${isVisible ? "opacity-100" : "opacity-0"}`}
+    >
       <div className="flex justify-end items-center">
         <div className="md:hidden" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes className="text-2xl" /> : <FaBars className="text-2xl" />}
+          {menuOpen ? (
+            <FaTimes className="text-2xl" />
+          ) : (
+            <FaBars className="text-2xl" />
+          )}
         </div>
       </div>
-      
-      <ul className={`flex flex-col md:flex-row gap-x-3 mt-4 md:mt-0 w-full justify-end ${menuOpen ? 'block' : 'hidden'} md:flex`}>
-        <li className="cursor-pointer text-[1.2rem] transition-colors duration-300 px-3 py-2 rounded-md hover:text-gray-200 hover:bg-gray-600">
-          <a href="#about">About</a>
-        </li>
-        <li className="cursor-pointer text-[1.2rem] transition-colors duration-300 px-3 py-2 rounded-md hover:text-gray-200 hover:bg-gray-600">
-          <a href="#services">Services</a>
-        </li>
-        <li className="cursor-pointer text-[1.2rem] transition-colors duration-300 px-3 py-2 rounded-md hover:text-gray-200 hover:bg-gray-600">
-          <a href="#skills">Skills</a>
-        </li>
-        <li className="cursor-pointer text-[1.2rem] transition-colors duration-300 px-3 py-2 rounded-md hover:text-gray-200 hover:bg-gray-600">
-          <a href="#clients">Clients</a>
-        </li>
-        <li className="cursor-pointer text-[1.2rem] transition-colors duration-300 px-3 py-2 rounded-md hover:text-gray-200 hover:bg-gray-600">
-          <a href="#contact">Contact</a>
-        </li>
+
+      <ul
+        className={`flex flex-col md:flex-row gap-x-5 mt-4 md:mt-0 w-full justify-end ${
+          menuOpen ? "block" : "hidden"
+        } md:flex`}
+      >
+        {NAV.map((nav) => (
+          <a href={nav.link} key={nav.id} className="cursor-pointer text-[1.2rem] transition-colors duration-300 rounded-md  ">
+            <li>
+              <p className="hover:scale-110 hover:text-[#a4a4a4]">{nav.title}</p>
+            </li>
+          </a>
+        ))}
       </ul>
     </div>
   );

@@ -10,7 +10,7 @@ export default function Testimonials() {
   };
 
   return (
-    <div className="p-4 mb-10" id="clients">
+    <div className="p-4 mb-[10rem]" id="clients">
       <div className="w-full flex justify-center">
         <div className="p-4 bg-[#FF8A00] w-fit rounded-lg my-5 text-white text-2xl">
           Testimonials

@@ -1,13 +1,15 @@
 // import React from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import logo from '../assets/logo.jpg'
+import ContactBanner from './ContactBanner';
 
 export default function Footer() {
   return (
-    <footer className=" relative bg-[url('assets/bess_cover.jpg')] bg-cover bg-center bg-no-repeat bg-fixed text-white py-8" id='contact'>
+    <footer className=" relative bg-[url('assets/bess_cover.jpg')] bg-cover bg-center bg-no-repeat bg-fixed text-white py-8 pt-[8rem] h-fit" id='contact'>
+      <ContactBanner/>
         <div className="absolute inset-0 bg-black opacity-70"></div>
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        {/* Logo Section */}
+
         <div className="mb-4 md:mb-0 z-10">
           <img src={logo} alt='logo' width={100} height={100} />
         </div>
@@ -21,7 +23,6 @@ export default function Footer() {
           <a href="#contact" className="hover:underline">Contact</a>
         </div>
 
-        {/* Contact Information */}
         <div className="text-center md:text-right z-10">
           <div className="flex items-center justify-center md:justify-start mb-2">
             <FaMapMarkerAlt className="mr-2" />

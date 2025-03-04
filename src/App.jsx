@@ -11,7 +11,6 @@ import WhyBESS from "./components/WhyBESS";
 export default function App() {
   return (
     <div >
-      {/* <Home/> */}
       <Navbar/>
       <Hero/>
       <About/>
