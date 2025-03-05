@@ -73,9 +73,15 @@ export default function Navbar() {
         } md:flex`}
       >
         {NAV.map((nav) => (
-          <a href={nav.link} key={nav.id} className="cursor-pointer text-[1.2rem] transition-colors duration-300 rounded-md  ">
+          <a
+            href={nav.link}
+            key={nav.id}
+            className="cursor-pointer text-[1.2rem] transition-colors duration-300 rounded-md  "
+          >
             <li>
-              <p className="md:hover:scale-110 hover:text-[#a4a4a4]">{nav.title}</p>
+              <p className="md:hover:scale-110 hover:text-[#a4a4a4]">
+                {nav.title}
+              </p>
             </li>
           </a>
         ))}

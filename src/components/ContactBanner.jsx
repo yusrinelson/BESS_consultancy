@@ -1,13 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import { useForm, ValidationError } from "@formspree/react";
-import Alert from './Alert';
+import Alert from "./Alert";
 
 export default function ContactBanner() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
   const [state, handleSubmit] = useForm("mzzdnqwk");
-  
+
   const formRef = useRef(null); // Create a reference for the form
 
   useEffect(() => {
@@ -62,7 +62,11 @@ export default function ContactBanner() {
                   required
                   className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                 />
-                <ValidationError prefix="Name" field="name" errors={state.errors} />
+                <ValidationError
+                  prefix="Name"
+                  field="name"
+                  errors={state.errors}
+                />
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Email</label>
@@ -72,7 +76,11 @@ export default function ContactBanner() {
                   required
                   className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                 />
-                <ValidationError prefix="Email" field="email" errors={state.errors} />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Company</label>
@@ -82,7 +90,11 @@ export default function ContactBanner() {
                   required
                   className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                 />
-                <ValidationError prefix="Company" field="company" errors={state.errors} />
+                <ValidationError
+                  prefix="Company"
+                  field="company"
+                  errors={state.errors}
+                />
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Message</label>
@@ -91,7 +103,11 @@ export default function ContactBanner() {
                   required
                   className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
                 />
-                <ValidationError prefix="Message" field="message" errors={state.errors} />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
               </div>
               <button
                 type="submit"

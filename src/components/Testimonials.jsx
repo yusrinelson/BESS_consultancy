@@ -1,7 +1,7 @@
 // import React from 'react';
 import { TESTIMONIALS } from "./index.js";
 import { FaQuoteLeft } from "react-icons/fa6";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function Testimonials() {
   const cardVariants = {
@@ -27,7 +27,9 @@ export default function Testimonials() {
             viewport={{ once: true, amount: 0.2 }}
             variants={cardVariants}
           >
-            <p className="text-3xl text-[#FF8A00]"><FaQuoteLeft /></p>
+            <p className="text-3xl text-[#FF8A00]">
+              <FaQuoteLeft />
+            </p>
             <p className="font-bold">{testimonial.name}</p>
             <p className="italic font-light">{testimonial.title}</p>
             <p className="mb-2 text-[0.7] md:text-[1rem]">{testimonial.text}</p>

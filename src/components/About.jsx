@@ -1,5 +1,5 @@
 // import React from 'react';
-import groupImage from '../assets/about_group2.png';
+import groupImage from "../assets/about_group2.png";
 
 export default function About() {
   return (

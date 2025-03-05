@@ -1,5 +1,5 @@
 // import React from 'react'
-import logo from '../assets/logo.jpg'
+import logo from "../assets/logo.jpg";
 
 export default function Hero() {
   return (
@@ -10,7 +10,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black opacity-70"></div>
 
       <div className="absolute p-4 top-[40px]">
-        <img src={logo} alt="logo" width={100} height={100} className="hidden md:block"/>
+        <img
+          src={logo}
+          alt="logo"
+          width={100}
+          height={100}
+          className="hidden md:block"
+        />
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-full">
