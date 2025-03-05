@@ -53,7 +53,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`w-full text-white fixed right-0 z-20 p-2 py-4 transition-all duration-300 ${
+      className={`w-full text-white fixed right-0 z-40 p-2 py-4 transition-all duration-300 ${
         isScrolled ? "bg-[#428bca]" : "md:bg-transparent bg-[#141515]"
       } rounded-b ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
@@ -75,7 +75,7 @@ export default function Navbar() {
         {NAV.map((nav) => (
           <a href={nav.link} key={nav.id} className="cursor-pointer text-[1.2rem] transition-colors duration-300 rounded-md  ">
             <li>
-              <p className="hover:scale-110 hover:text-[#a4a4a4]">{nav.title}</p>
+              <p className="md:hover:scale-110 hover:text-[#a4a4a4]">{nav.title}</p>
             </li>
           </a>
         ))}
